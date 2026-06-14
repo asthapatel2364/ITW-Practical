@@ -1,0 +1,182 @@
+Practical 5
+Aim:Implement various JS programs to understand the methods and properties of JS Objects.
+Program 5.1
+Write 	a JS program to create array, initialize it and perform basic 	operations like, push(), pop(), reverse(), sort(), slice(), concat().
+Code:
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        var letters = ["D","A","C","B"];
+        document.write("Original Array:" + letters +"<br><br>");
+       letters.push("E");
+        document.write("After push('E'):" + letters +"<br><br>");
+          letters.pop();
+        document.write("After pop():" + letters +"<br><br>");
+        letters.sort();
+        document.write("After sort():" + letters +"<br><br>");
+      letters.reverse();
+        document.write("After reverse():" + letters +"<br><br>");
+       var part = letters.slice(1,3);
+        document.write("After slice(1,3):" + part +"<br><br>");
+  var newArray =  letters.concat(["X","Y","Z"]);
+        document.write("After concat('X','Y','Z'):" + newArray + "<br><br>");
+    </script>
+</body>
+</html>
+
+
+Program 5.2
+Write 	a JS program to create a string and perform operations like, 	charAt(), concat(), replace(), toLowerCase(), toUpperCase(), 	slice(), and substring().
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript String Operations</title>
+</head>
+<body>
+    <h2>JavaScript String Methods Demo</h2>
+    <button onclick="performOperations()">Run String Operations</button>
+    <h3>Output:</h3>
+    <p id="output"></p>
+    <script>
+        function performOperations() {
+            let str1 = "Hello World";
+            let str2 = " JavaScript";
+            let result = "";
+            result += "Character at index 4: " + str1.charAt(4) + "<br>";
+            let combinedString = str1.concat(str2);
+            result += "Concatenated String: " + combinedString + "<br>";
+            let replacedString = str1.replace("World", "Everyone");
+            result += "Replaced String: " + replacedString + "<br>";
+            result += "Lowercase: " + str1.toLowerCase() + "<br>";
+            result += "Uppercase: " + str1.toUpperCase() + "<br>";
+            result += "Slice (0 to 5): " + str1.slice(0, 5) + "<br>";
+            result += "Substring (6 to 11): " + str1.substring(6, 11) + "<br>";
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
+
+
+ Program 5.3
+Write 	a JS program to display the date in DD/MM/YYYY and time in HH:MM:SS 	format.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Time Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #datetime {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+ <h2>Current Date and Time</h2>
+    <div id="datetime"></div>
+<script>
+        function displayDateTime() {
+            let now = new Date();
+
+            let day = String(now.getDate()).padStart(2, '0');
+            let month = String(now.getMonth() + 1).padStart(2, '0');
+            let year = now.getFullYear();
+
+            let hours = String(now.getHours()).padStart(2, '0');
+            let minutes = String(now.getMinutes()).padStart(2, '0');
+            let seconds = String(now.getSeconds()).padStart(2, '0');
+
+            let date = day + "/" + month + "/" + year;
+            let time = hours + ":" + minutes + ":" + seconds;
+
+            document.getElementById("datetime").innerHTML = 
+                "Date: " + date + "<br>Time: " + time;
+        }
+
+        // Update every second
+        setInterval(displayDateTime, 1000);
+
+        // Initial call
+        displayDateTime();
+    </script>
+</body>
+</html>
+
+
+Program 5.4
+Write 	a JS program to demonstrate the use of various methods of math object
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Math Object Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        #output {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 8px 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript Math Object Methods Demo</h2>
+    <button onclick="showMathMethods()">Show Math Operations</button>
+
+    <div id="output"></div>
+
+    <script>
+        function showMathMethods() {
+            let number = -5.7;
+            let result = "";
+
+            result += "Original Number: " + number + "<br><br>";
+
+            // Math.abs()
+            result += "Math.abs(): " + Math.abs(number) + "<br>";
+
+            // Math.ceil()
+            result += "Math.ceil(): " + Math.ceil(number) + "<br>";
+
+            // Math.floor()
+            result += "Math.floor(): " + Math.floor(number) + "<br>";
+
+            // Math.round()
+            result += "Math.round(): " + Math.round(number) + "<br>";
+
+            // Math.sqrt()
+            result += "Math.sqrt(25): " + Math.sqrt(25) + "<br>";
+
+            // Math.pow()
+            result += "Math.pow(2, 3): " + Math.pow(2, 3) + "<br>";
+
+            // Math.max()
+            result += "Math.max(10, 20, 30): " + Math.max(10, 20, 30) + "<br>";
+
+            // Math.min()
+            result += "Math.min(10, 20, 30): " + Math.min(10, 20, 30) + "<br>";
+
+            // Math.random()
+            result += "Math.random(): " + Math.random() + "<br>";
+
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
