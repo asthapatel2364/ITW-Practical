@@ -1,0 +1,86 @@
+Practical 10
+Program 10.1
+To understand and apply AngularJS framework features for developing responsive and dynamic web applications.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Practical-10</title>
+
+    <!-- AngularJS CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+
+    <script>
+        var app = angular.module("myApp", []);
+
+        app.controller("myController", function($scope) {
+
+            // Numbers for expression
+            $scope.num1 = 10;
+            $scope.num2 = 20;
+
+            // Name binding
+            $scope.name = "";
+
+            // Click counter
+            $scope.count = 0;
+
+            // Employee list
+            $scope.employees = [
+                {name: "Rahul", salary: 20000},
+                {name: "Priya", salary: 30000},
+                {name: "Amit", salary: 25000}
+            ];
+        });
+    </script>
+</head>
+
+<body ng-app="myApp" ng-controller="myController">
+
+    <h1>AngularJS Practical-10 Demo</h1>
+
+    <!-- 1. Expression -->
+    <h3>1. Expression</h3>
+    <p>Addition: {{num1 + num2}}</p>
+
+    <!-- 2. Two-way Data Binding -->
+    <h3>2. Data Binding</h3>
+    Enter Name: <input type="text" ng-model="name">
+    <p>Hello {{name}}</p>
+
+    <!-- 3. Click Event -->
+    <h3>3. Click Event</h3>
+    <button ng-click="count = count + 1">Click Me</button>
+    <p>Total Clicks: {{count}}</p>
+
+    <!-- 4. Show/Hide -->
+    <h3>4. Show/Hide</h3>
+    <input type="checkbox" ng-model="show"> Show Text
+    <p ng-show="show">This is AngularJS!</p>
+
+    <!-- 5. Employee Table -->
+    <h3>5. Employee List (ng-repeat)</h3>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+
+        <tr ng-repeat="emp in employees">
+            <td>{{emp.name | uppercase}}</td>
+            <td>{{emp.salary | currency:"₹"}}</td>
+        </tr>
+    </table>
+
+    <!-- 6. Filter Search -->
+    <h3>6. Search Filter</h3>
+    Search: <input type="text" ng-model="searchText">
+
+    <ul>
+        <li ng-repeat="emp in employees | filter:searchText">
+            {{emp.name}} - {{emp.salary}}
+        </li>
+    </ul>
+
+</body>
+</html>
