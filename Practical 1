@@ -1,0 +1,153 @@
+Program 1.1
+To write a “Hello World” program using JavaScript by linking an external JavaScript file (HELLO.JS) with an HTML file.
+Code: 
+File 1: HTML File (index.html)
+<!DOCTYPE html>
+<head>
+        <title>practical 1.1</title>
+    <script src="p1.1.js"></script>
+</head>
+<body>
+   </body>
+</html>
+File 2: JavaScript File (hello.js)
+document.write("Hello World");         
+
+
+program1.2:-
+(1) Define VariousJava Scrip terms.
+(a) JS Statements (b) JS Syntax
+(c)JS Keywords  (d) JS Comments
+
+ans:-(a) JS Statements
+ JavaScript statements are individual instructions that tell the browser what action to perform. Each statement usually ends with a semicolon (;).
+ Example:
+let x = 10;
+
+(b) JS Syntax
+ JavaScript syntax refers to the set of rules that defines how JavaScript programs are written and structured. It includes rules for variables, operators, functions, and statements.
+ Example:
+let name = "John";
+(c) JS Keywords
+ JavaScript keywords are reserved words that have special meanings and cannot be used as variable or function names.
+ Examples: let, var, const, if, else, for, while, function, return.
+(d) JS Comments
+ JavaScript comments are used to explain code or make it more readable. They are ignored by the browser during execution.
+ Types of comments:
+Single-line comment: // This is a comment
+
+Multi-line comment:
+
+/* This is
+   a multi-line comment */
+
+
+Program 1.3
+To understand how JavaScript is embedded in HTML and to display output using different methods.
+Code:
+<!DOCTYPE html>
+<head>
+        <title>JS Output Methods</title>
+</head>
+<body>
+    <h2 id="course"></h2>
+    <script>
+        document.write("Student Name: Astha Patel <br> ");
+        document.getElementById("course").innerHTML="course: IT Workshop";
+        alert("Welcome to JavaScript Leb");
+        console.log("JavaScript Output Demonstration");
+        </script>
+</body>
+</html>
+
+
+Program 1.4
+To study JavaScript variables and data types.
+Code:
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        let name = "Astha";
+        let age = "17";
+        const isStudent = true;
+        document.write("Name: " + name + "<br>");
+        document.write("Age: " + age + "<br>");
+        document.write("Student: " + typeof(name) + "<br>");
+        document.write("Type of Name: " + typeof(name) + "<br>");
+        document.write("Type of Age: " + typeof(age) + "<br>");
+        document.write("Type of Student: " + typeof(isStudent));
+     </script>
+</body>
+</html>
+
+
+Program 1.5
+To perform arithmetic and logical operations using JavaScript operators.
+Code:
+<!DOCTYPE html>
+<head> </head>
+<body>
+    <script>
+        let a = 10;
+        let b =  5;
+        document.write("Addition: " + (a + b) + "<br>");
+        document.write("Subtraction: " + (a - b) + "<br>");
+        document.write("Multiplication: " + (a * b) + "<br>");
+        document.write("Division: " + (a / b) + "<br>");
+        document.write("a > b: " + (a > b) + "<br>");
+        document.write("a == b: " + (a == b));
+</script>
+</body>
+</html>
+
+
+Program 1.6
+To understand JavaScript syntax, statements, and comments.
+Code:
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        let y = 10;
+        let x = 20;
+        let sum = x + y
+        document.write("Sum is : " + sum);
+    </script>
+    </body>
+</html>
+
+
+Program 1.7
+To implement popup boxes using JavaScript.
+Code:
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        let name = prompt(" Enter Your Name:");
+let response = confirm("Are You Student?");
+if (response) {
+    alert(" Welcome Student " + name);
+} else {
+    alert("Welcome Guest " + name);
+}
+</script>
+    </body>
+</html>
+
+
+Program 1.8
+To create a simple calculator using JavaScript.
+Code:
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        let a = parseInt(prompt("Enter first number"));
+        let b = parseInt(prompt("Enter second number"));
+        document.write("Addition:" + (a + b) + "</br>");
+        document.write("Subtraction: " + (a - b));
+    </script>
+</body>
+</html>
