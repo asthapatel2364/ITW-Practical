@@ -1,0 +1,180 @@
+Practical - 2
+Aim: Implement various programs to understand various JS controls.
+
+Program 2.1
+To write a JS program using the if statement.
+Code:
+<!DOCTYPE html>
+<head>
+        <title>if  Statement</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        if (a > 5)
+            document.write("a is greater then 5")
+    </script>
+</body>
+</html>
+
+
+Program 2.2
+To write a JS program using the if…….else statement.
+Code:
+<!DOCTYPE html>
+<head>
+       <title>if else statement</title>
+</head>
+<body>
+ <script>
+    var a = 7;
+if
+    (a % 2 == 0)
+    document.write("Even Number");
+    else
+    document.write("Odd Number");
+ </script>   
+</body>
+</html>
+
+
+Program 2.3
+To write a JS program using the else…….if statement.
+
+Code:
+<!DOCTYPE html>
+<head>
+       <title>if else Statement</title>
+</head>
+<body>
+    <script>
+        var marks = 85;
+        if (marks >= 75)
+            document.write("Distinction");
+        else if (marks >= 60)
+            document.write("First Class");
+        else
+            document.write("Pass");
+    </script>
+</body>
+</html>
+
+
+Program 2.4
+To write a JS program using switch statement.
+
+Code:
+<!DOCTYPE html>
+<head>
+       <title>Switch Statement</title>
+</head>
+<body>
+    <script>
+        var day = 8;
+        switch(day) {
+        case 1: document.write("Monady");
+            break;
+        case 2: document.write("Tuesday");
+            break;
+        case 3: document.write("Wednesday");
+            break;
+        case 4: document.write("Thrusday");
+            break;
+        case 5: document.write("Friday");
+            break;
+        case 6: document.write("Saturday");
+            break;
+        case 7: document.write("Sunday");
+            break;
+        default: document.write("Invalid Day");
+        }
+    </script>
+</body>
+</html>
+
+
+Program 2.5
+Write a JS program to demonstrate for loop.
+Code:
+<!DOCTYPE html>
+<head></head>
+<body>
+<script>
+for(var i = 2; i<= 5; i++){
+  document.write(i + "<br>");
+}
+</script>
+</body>
+</html>
+
+
+Program 2.6
+Write a JS program to demonstrate while loop.
+Code:
+<html lang="en">
+<head></head>
+<body>
+<script>
+var i=1;
+while(i <=5){
+  document.write(i + "<br>");
+  i++
+};
+</script>
+</body>
+</html>
+
+
+Program 2.7
+Write a JS program to demonstrate do…while loop.
+Code:
+<!DOCTYPE html>
+<head></head>
+<body>
+<script>
+var i=2;
+do{
+  document.write(i + "<br>");
+  i++
+}while(i <= 10);
+</script>
+</body>
+</html>
+
+
+Program 2.8
+Write a JS program to demonstrate for-in loop.
+Code:
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+      var student = {name:"Astha", age:17,city:"Bayad"} ;
+      for (var key in student){
+        document.write(key +  ":" +student[key] + "<br>" )
+      }
+    </script>
+</body>
+</html>
+
+
+Program 2.9
+Write a JS program to demonstrate try, catch and throw.
+Code:
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        try{
+            var x = "1234";
+            x = Number(x);
+ if(isNaN(x))
+        throw "Not a Number"
+    document.write("Valid Number");
+ }
+ catch(err){
+    document.write("Error: " + err);
+ }
+    </script>
+</body>
+</html>
