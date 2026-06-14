@@ -1,0 +1,102 @@
+Practical 7
+Program 7.1
+Implement JS Program to demonstrate JavaScript HTML DOM concepts.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>7</title>
+</head>
+<script>
+    // ✅ FIX: changeText – ab toggle karega, ek baar nahi rukega
+    function changeText() {
+        var textElement = document.getElementById("mytext");
+        if (textElement.innerHTML === "This is a DOM Exercise") {
+            textElement.innerHTML = "DON'T CLICK HERE!!!!";
+        } else {
+            textElement.innerHTML = "This is a DOM Exercise";
+        }
+    }
+
+    // change color
+    function setBlue() {
+        document.getElementById("mytext").style.color = "Blue";
+    }
+
+    function SetYellow() {
+        document.getElementById("mytext").style.color = "Yellow";
+    }
+
+    // Get Name (Input)
+    function showName() {
+        var name = document.getElementById("name").value;
+        if (name == "") {
+            alert("Please enter your name.");
+        } else {
+            alert("Hello, " + name + "!");
+        }
+    }
+
+    // Cube Number
+    function cubeNumber() {
+        var num = document.getElementById("number").value;
+        if (num == "") {
+            alert("Please enter a number.");
+        } else {
+            alert("The cube of " + (num) + " is " + (num * num * num) + ".");
+        }
+    }
+
+    // Count Radio Button
+    function CountGender() {
+        var gender = document.getElementsByName("gender");
+        alert("Total Options: " + gender.length);
+    }
+
+    // Hover Background
+    function changeBackground() {
+        document.body.style.backgroundColor = "Cyan";
+    }
+
+    function normalBackground() {
+        document.body.style.backgroundColor = "White";
+    }
+</script>
+
+<body>
+    <h2>JavaScript DOM: All Concept of DOM</h2>
+    <hr>
+
+    <h3>Change Text</h3>
+    <p id="mytext" onclick="changeText()">This is a DOM Exercise</p>
+
+    <h3>Change Color</h3>
+    <button onclick="setBlue()">Blue</button>
+    <button onclick="SetYellow()">Yellow</button>
+    <hr>
+
+    <h3>Get Name (Input)</h3>
+    <input type="text" id="name" placeholder="Enter your name">
+    <button onclick="showName()">Submit</button>
+    <hr>
+
+    <h3>Cube Number</h3>
+    <input type="number" id="number" placeholder="Enter a number">
+    <button onclick="cubeNumber()">Calculate Cube</button>
+    <hr>
+
+    <h3>Count Radio Button</h3>
+    <h4>Select Gender</h4>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <br><br>
+    <button onclick="CountGender()">Count Options</button>
+    <hr>
+
+    <h3>Hover Background</h3>
+    <div onmouseover="changeBackground()" onmouseout="normalBackground()" 
+         style="padding:20px; border:1px solid black; width:auto">
+        Hover over this area to change background color.
+    </div>
+</body>
+</html>
