@@ -1,0 +1,31 @@
+Practical 9
+Program 9.1
+Implement a JS program to demonstrate how to Use AJAX for Sending and Receiving data asynchronously to create interactive web applications.
+Code:
+<!doctype html>
+<html lang="en">
+<head>
+    <title>9-AJAX</title>
+</head>
+<body>
+    <h2>AJAX Example</h2>
+    <button type="button" onclick="loadData()">Load data</button><br><br>
+    <div id="demo">Click Button to Fetch Data.....</div>
+    <script>
+        //http://localhost/ITW/9.html
+        function loadData(){
+            //Create XMLHttpRequest object
+            var xhttp=new XMLHttpRequest();
+            //Handle response
+            xhttp.onreadystatechange=function(){
+                if(this.readyState==4&&this.status==200){
+                    document.getElementById("demo").innerHTML=this.responseText;
+                }
+            };
+            //Send request
+            xhttp.open("GET","data.txt",true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>
