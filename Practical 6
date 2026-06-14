@@ -1,0 +1,205 @@
+Practical 6
+Program 6.1
+Implement JS Programs to demonstrate the JavaScript browser BOM and Navigation.
+Code:
+<!DOCTYPE html>
+<head>
+    <title>BOM All Concepts</title>
+</head>
+<body>
+    <h2>JavaScript BOM-All concepts of window Object </h2>
+    <button onclick="showAlert()">Alert</button>
+     <button onclick="showConfirm()">Confirm</button>
+      <button onclick="showPrompt()">Prompt</button>
+       <button onclick="Openpage()">Open page</button>
+        <button onclick="windowSize()">window Size</button>
+<script>
+function showAlert() {
+    alert("Hello Student!");
+
+}
+function showConfirm(){
+    let res = confirm("Are You Sure?");
+    alert(res);
+}
+function showPrompt(){
+    let name = prompt("Enter your name:");
+    alert("Hello" + name);
+}
+function Openpage(){
+    window.open("https://www.ganpatuniversity.ac.in/")
+}
+function windowSize(){
+    alert("width:" + window.innerWidth + "Height:" + window.innerHeight);
+}
+</script>   
+</body>
+</html>
+
+
+Program 6.2
+Code:
+<!DOCTYPE html>
+<html>
+  <body>
+      <h2>Javascript BOM - All Concepts OF Screen Object</h2>
+       <script>
+        document.write("Screen Width: " + screen.width + "<br>");
+        document.write("Screen Height: " + screen.height + "<br>");
+        document.write("Available Width: " + screen.availWidth + "<br>");
+        document.write("Available Height: " + screen.availHeight + "<br>");
+        document.write("Color Depth: " + screen.colorDepth + "<br>");
+        document.write("Pixel Depth: " + screen.pixelDepth + "<br>");
+      </script>
+      </body>
+</html>
+
+
+Program 6.3
+Code:
+<!DOCTYPE html>
+<html>
+  <head>
+    </head>
+  <body>
+    <h2>JavaScript BOM - All Concepts OF Location Object</h2>
+    <button onclick="getURL()">Get URL</button>
+    <button onclick="loadPage()">Load Page</button>
+    <button onclick="reloadPage()">Reload</button>
+    <script>
+        function grtURL(){
+          alert(location.href);
+        }
+        function loadPage(){
+          location.assign("https://www.google.com");
+        }
+        function reloadPage(){
+          location.reload();
+        }
+      </script>
+  </body>
+</html>
+
+
+Program:6.4
+Code:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>P - 6.4</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h2>JavaScript BOM - All Concepts OF Location Object</h2>
+    
+    <button onclick="getHistory()">History Count</button>
+    <button onclick="goBack()">Back</button>
+    <button onclick="goForward()">Forward</button>
+    <button onclick="goPage()">Go -1</button>
+    
+      <script>
+        function grtHistory(){
+          alert("Pages visited: " + history.length);
+        }
+function goBack(){
+          history.back();
+        }
+function goForward(){
+          history.forward();
+        }
+ function goPage(){
+          history.go(-1);
+        }
+      </script>
+  </body>
+</html>
+
+
+Program:6.5
+Code:
+<!DOCTYPE. html>
+<html>
+  <head>
+	<title>p - 6.5</title>
+  </head>
+  <body>
+  	<button onclick="checkOnline()">Online Status</button>
+  	<button onclick="checkCookie()">Cookie Enabled</button>
+  	<button onclick="checkLang()">Language</button>
+  	<button onclick="browserInfo()">Browser Info</button>
+  	<script>
+    	    	function checkOnline(){
+  	    alert(navigator.online ? "Online" : "offline");
+    	}
+       	function checkCookie(){
+      	alert(navigator.cookieEnabled ? "Enabled" : "Disabled");
+    	}
+    	function checkLang(){
+      	alert("Language: " + navigator.language);
+    	}
+      	function browserInfo(){
+      	alert("Name: " + navigator.appName "\nversion: " + navigator.appVersion +
+	      "\nPlatform: " + navigator.platform);
+    	}
+  	</script>
+</body>
+</html>
+
+
+Program 6.6
+Code:
+<!DOCTYPE html>
+<html>
+  <head>
+     </head>
+  <body>
+    <h2>Javascript BOM - All Concept OF Timing</h2>
+      <button onclick="runOnce()">Run Once</button> 
+      <button onclick="startClock()">Start Clock</button>
+      
+      <p id="clock"></p>
+<script>
+       function runOnce(){
+      setTimeout(function(){
+      alert("Hello after 2 seconds");
+      },2000);
+    }
+        function startClock(){
+      setInterval(function(){
+        document.getElementById("clock").textContent=
+        new Date().toLocaleTimeString();
+      },1000);
+    }
+</script>
+  </body>
+</html>
+
+
+Program:6.7
+Code:
+<!DOCTYPE html>
+<html>
+  <head>
+   </head>
+  <body>
+    <h2>Javascript Cookies Demo</h2>
+      <button onclick="setcookie()">set Cookie</button>
+      <button onclick="getcookie()">Get Cookie</button>
+      
+      <p id="output"></p>
+<script>
+      function setcookie(){
+        document.cookie = "username=Astha; max-age=" + 30*24*60*60;
+        alert("Cookie Saved!");
+    }
+       function getcookie(){
+    let cookies = document.cookie;
+     if(cookies === ""){
+      document.getElementById("output").innerHTML = "No cookies found!";
+    }else{
+      document.getElementById("output").innerHTML = "cookies: " + cookies;
+    }
+    }
+  </script>
+  </body>
+</html>
