@@ -1,0 +1,127 @@
+Practical 4
+Aim:Implement various JS programs to understand the use of OOPs concepts.
+Program 4.1
+Write 	a JS program to demonstrate the declaration of class.
+Code:
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+        class person {
+            name = "Astha";
+            age = 17;
+        }
+        document.write("Class Person Created ");
+    </script>
+</body>
+</html>
+
+
+ Program 4.2	
+Write 	a JS program to demonstrate the creation of object.
+Code:
+<!DOCTYPE html>
+<head>  </head>
+<body>
+   <script>
+    class person {
+        name = "Astha" ;
+        age = "17";
+ }
+ var p1 = new person();
+ document.write("Name: " + p1.name + "<br>");
+ document.write("Age: " + p1.age);
+   </script> 
+</body>
+</html>
+
+
+Program 4.3	
+Write 	a JS program to demonstrate the use of constructor.
+Code:
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<script>
+class student {
+constructor(name,age){
+    this.name = name;
+    this.age = age;}} 
+var s1 = new student("Astha",17);
+var s2 = new student("",18);
+  document.write("Name: " + s1.name + "<br>");
+  document.write("Age: " + s1.age + "<br>");
+  document.write("Name: " + s2.name + "<br>");
+  document.write("Age: " + s2.age );
+</script> 
+ </body>
+</html>
+
+
+Program 4.4
+Write 	a JS program to demonstrate the concept of message passing.
+Code:
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        class Id1 {
+            add() {
+                document.write("Addition Method Called");
+            }}
+        var c1 = new Id1();
+        c1.add();   //Message passing
+    </script>
+</body>
+</html>
+
+
+Program 4.5	
+Write 	a JS program to demonstrate the concept of Inheritance.
+Code:
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        class Person{
+        showDetails(){
+document.write("This is a Person<br>")
+        }}
+class student extends Person {
+    study()
+    {
+        document.write("Student Studies")
+    }}
+var s1 = new student();
+s1.showDetails();
+s1.study();
+    </script>
+</body>
+</html>
+
+
+ Program 4.6	
+Write 	a JS program to demonstrate the concept of Polymorphism.
+Code:
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+      class Person{
+        Work(){
+            document.write("Person works.<br>");
+                }
+      }  
+      class Student extends Person {Work(){
+        document.write("Person Works.<br>")
+      }
+         }
+         var p1 = new Student();
+         p1.Work();
+    </script>
+</body>
+</html>
