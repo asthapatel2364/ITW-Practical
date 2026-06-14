@@ -1,0 +1,67 @@
+Practical 8
+Aim:Implement JS programs to demonstrate form validation and email validation using regular expression.
+Program 8.1
+Write 	a JS program to validate a user form using Regular Expressions.
+Code:
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h3>User Registration Form</h3>
+      <form onsubmit="return validationForm()">
+        Name:
+        <input type="text" id="name"><br><br>
+        Mobile Number:
+        <input type="text" id="mobile"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+      <p id="msg"></p>
+      <script>
+        function validationForm(){
+          var name = document.getElementById("name").value;
+          var mobile = document.getElementById("mobile").value;
+          
+          var namePattern = /^[A-Za-z ]+$/;
+          var mobilePattern = /^[0-9]{10}$/;
+          
+          if(!namePattern.test(name)){
+            document.getElementById("msg").innerHTML = "Invalid Name";
+            document.getElementById("msg").style.color = "red";
+            return false;
+          }
+          else if(!mobilePattern.test(mobile)){
+            document.getElementById("msg").innerHTML = "Invalid mobile number";
+            document.getElementById("msg").style.color = "red";
+            return false;
+          }
+          else{
+            document.getElementById("msg").innerHTML = "Form Validation Successful";
+            document.getElementById("msg").style.color = "green";
+            return false;
+          }
+        }
+      </script>
+  </body>
+</html>
+
+
+Program 8.2
+Write 	a JS program to validate an email address using Regular Expressions.
+Code:
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      var email = prompt("Enter Email ID");
+      var emailPattern = /^[a-zA-Z0-9.]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
+      if(emailPattern.test(email)){
+        document.write("Valid Email Address");
+      }else{
+        document.write("Invalid Email Address");
+      }
+    </script>
+  </body>
+</html>
