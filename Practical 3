@@ -1,0 +1,21 @@
+Practical 3
+Program 1
+Implement a JS program which demonstrates the use of JavaScript functions and function closure.
+Code:
+<!DOCTYPE html>
+<head>
+        <title>JavaScript Closure Example </title>
+</head>
+<body>
+    <h3>JavaScript Function Flow With Closure</h3>
+    <button onclick="countClick()">Click Me</button>
+    <script>
+     function createCounter(){
+        let count = 0;
+        return function () {
+            count++;
+            alert("Button clicked" + count + "times")  };  }
+     let countClick = createCounter();
+    </script>
+</body>
+</html>
